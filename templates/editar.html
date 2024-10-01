@@ -28,10 +28,10 @@
             <input type="text" name="departamento" placeholder="Departamento" value="{{ funcionario.departamento }}" required>
             <input type="text" name="loja" placeholder="Loja" value="{{ funcionario.loja }}" required>
             <p>Data de contratação:</p>
-            <br> 
             <input type="date" name="data_contratacao" placeholder="Data de Contratação" value="{{ funcionario.data_contratacao }}" required>
 
             <label>
+                <br>
                 Demitido:
                 <input type="checkbox" id="demitido" name="demitido" {% if funcionario.demitido %}checked{% endif %} onclick="toggleDataDemissao()">
             </label>
@@ -43,7 +43,7 @@
 
             <button type="submit">Atualizar</button>
         </form>
-        <a href="/">Voltar</a>
+        <a href="/" class = 'custom-link'>Voltar</a>
 
     </div>
 </body>

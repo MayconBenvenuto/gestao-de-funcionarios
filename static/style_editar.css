@@ -15,6 +15,20 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.custom-link {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #DB4437; /* Vermelho do Google */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 h1 {
     text-align: center;
     color: #4285F4; /* Azul do Google */
@@ -39,7 +53,7 @@ form {
 
 input[type="text"],
 input[type="number"] {
-    padding: 10px;
+    padding: 20px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -53,6 +67,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none; /* Remove o sublinhado */
+    margin-top: 22px;
 
 }
 

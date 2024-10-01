@@ -31,20 +31,29 @@ def index():
 
 @app.route('/buscar', methods=['POST'])
 def buscar():
-    nome = request.form.get('nome', '').strip()
-    setor = request.form.get('setor', '').strip()
+    nome = request.form.get('nome', '').strip()  # Obtenha e limpe o campo 'nome'
+    setor = request.form.get('setor', '').strip()  # Obtenha e limpe o campo 'setor'
     
-    # Filtra os funcionários com base no nome e setor
+    # Se ambos os campos estiverem vazios, retorne uma mensagem ou uma página vazia
+    if not nome and not setor:
+        return render_template('resultado.html', funcionarios=[], mensagem="Por favor, insira um nome ou setor para a busca.")
+    
+    # Inicialize a query básica sem filtros
     query = Funcionario.query
     
-    if nome:  # Se o nome não estiver vazio, adicione o filtro
+    # Adiciona filtro se o nome foi fornecido
+    if nome:
         query = query.filter(Funcionario.nome.ilike(f'%{nome}%'))
     
-    if setor:  # Se o setor não estiver vazio, adicione o filtro
+    # Adiciona filtro se o setor foi fornecido
+    if setor:
         query = query.filter(Funcionario.departamento.ilike(f'%{setor}%'))
     
-    funcionarios_encontrados = query.all()  # Execute a consulta
+    # Execute a consulta com os filtros adicionados, se houver
+    funcionarios_encontrados = query.all()
+
     return render_template('resultado.html', funcionarios=funcionarios_encontrados)
+
 
 @app.route('/adicionar', methods=['GET', 'POST'])
 def adicionar():
