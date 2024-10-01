@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Funcionários</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Funcionários</h1>
+        <form action="/buscar" method="post">
+            <input type="text" name="nome" placeholder="Digite o nome do funcionário">
+            <input type="text" name="setor" placeholder="Digite o setor do funcionário">
+            </br>
+            <button type="submit">Consultar</button>
+        </form>
+    </div>
+</body>
+</html>

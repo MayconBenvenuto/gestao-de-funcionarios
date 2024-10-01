@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Consulta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados da Consulta</h1>
+        {% if funcionarios %}
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Salário</th>
+                    <th>Departamento</th>
+                    <th>Loja</th>
+                    <th>Data de Contratação</th>
+                    <th>Data de Demissão</th>
+                </tr>
+                {% for funcionario in funcionarios %}
+                <tr>
+                    <td>{{ funcionario.id }}</td>
+                    <td>{{ funcionario.nome }}</td>
+                    <td>{{ funcionario.cargo }}</td>
+                    <td>{{ funcionario.salario }}</td>
+                    <td>{{ funcionario.departamento }}</td>
+                    <td>{{ funcionario.loja }}</td>
+                    <td>{{ funcionario.data_contratacao }}</td>
+                    <td>{{ funcionario.data_demissao }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>Nenhum funcionário encontrado.</p>
+        {% endif %}
+        <a href="/">Voltar</a>
+    </div>
+</body>
+</html>
