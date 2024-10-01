@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Funcionário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_adicionar.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Adicionar Funcionário</h1>
+        <form action="/adicionar" method="post">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="cargo" placeholder="Cargo" required>
+            <input type="number" step="0.01" name="salario" placeholder="Salário" required>
+            <input type="text" name="departamento" placeholder="Departamento" required>
+            <input type="text" name="loja" placeholder="Loja" required>
+            <input type="date" name="data_contratacao" required>
+            <button type="submit">Adicionar Funcionário</button>
+        </form>
+        <a href="/">Voltar</a>
+    </div>
+</body>
+</html>

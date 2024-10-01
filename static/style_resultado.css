@@ -1,0 +1,63 @@
+/* style_resultado.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fundo claro */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* Fundo branco para a tabela de resultados */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #4285F4; /* Azul do Google */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f9f9f9; /* Efeito de hover nas linhas */
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #DB4437; /* Vermelho do Google */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Margem à esquerda dos botões */
+}
+
+button:hover {
+    background-color: #C13528; /* Vermelho mais escuro ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+}

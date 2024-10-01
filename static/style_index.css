@@ -1,0 +1,98 @@
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #4a90e2;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os campos */
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%; /* Largura total */
+    transition: border-color 0.3s;
+}
+
+/* Foco em Inputs */
+input:focus {
+    border-color: #4a90e2;
+    outline: none; /* Remove a borda padrão do navegador */
+}
+
+/* Botão */
+button {
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none; /* Remove a borda do botão */
+}
+
+button:hover {
+    background-color: #357ab8; /* Cor do botão ao passar o mouse */
+}
+
+/* Link para Voltar */
+a {
+    text-align: center;
+    color: #4a90e2;
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Resultados */
+.resultados {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+/* Botões de Editar */
+.edit-button {
+    background-color: #f39c12;
+    color: white;
+    padding: 2px 10px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.edit-button:hover {
+    background-color: #e67e22; /* Cor ao passar o mouse */
+}
